@@ -1,0 +1,88 @@
+---
+import Social from "./Social.astro";
+---
+
+<footer>
+  <div class="bigger-container">
+    <div class="row">
+      <div class="col-lg-4 col-sm-6 col-12">
+        <div class="inner">
+          <p class="logo">MTLSTEAKHOUSE</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. imperdiet
+            ac fringilla nec, molestie eget arcu. Ut id vehicula dolor.
+          </p>
+
+          <div class="contact__info">
+            <a href="#"><i class="fa fa-phone"></i> 514-887-8996</a>
+            <a href="#"><i class="fa fa-envelope"></i>info@mtlsteakhouse.ca</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-sm-6 col-12">
+        <div class="inner">
+          <h3 class="title">Opening hours</h3>
+          <p class="mb-0">Monday-Wednesday: 11am-9pm</p>
+          <p>Thursday-Saturday: 11am-10pm</p>
+
+          <a href="#"
+            ><i class="fa fa-map-marker-alt"></i> 123 Ontario Boulevard, <br
+            />Montréal, QC (H1K 3KS)</a
+          >
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-sm-6 col-12">
+        <div class="socials">
+          <h3 class="title">Connect with us</h3>
+          <ul class="nolist">
+            <Social icon="fa fa-facebook" url="#" />
+            <Social icon="fa fa-instagram" url="#" />
+            <Social icon="fa fa-tiktok" url="#" />
+            <Social icon="fa fa-youtube" url="#" />
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-12 text-center">
+        <div class="copyrights">
+          <p>
+            Copyright © 2023 MTLSTEAKHOUSE. All Rights Reserved. Custom website
+            designed by <a href="#">Oumaima Lairani</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    padding: 40px 0 20px;
+    background: #0e0e0e;
+    font-family: var(--poppins);
+  }
+
+  .contact__info a {
+    display: block;
+  }
+
+  footer h3.title {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  p.logo {
+    font-family: var(--poppins);
+    font-size: 25px;
+  }
+
+  footer .copyrights p {
+    font-size: 14px;
+    font-family: var(--poppins);
+    margin: 0;
+  }
+</style>

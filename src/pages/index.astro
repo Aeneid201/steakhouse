@@ -2,6 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import banner from "../assets/img/steak.jpg";
+import aboutImg from "../assets/img/about.png";
+import menuImg from "../assets/img/menu.jpg";
+import orderImg from "../assets/img/order.png";
 import MainTitle from "../components/MainTitle.astro";
 ---
 
@@ -21,28 +24,184 @@ import MainTitle from "../components/MainTitle.astro";
       </div>
     </div>
   </section>
+
+  <section class="homeAbout inner-padd">
+    <div class="bigger-container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 col-sm-6 col-12">
+          <div class="img">
+            <Image src={aboutImg} alt="about" width="600" height="600" />
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-sm-6 col-12">
+          <div class="inner">
+            <MainTitle title="A little bit" subtitle="about us" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              commodo luctus metus, sed imperdiet leo vehicula ac. Phasellus
+              felis sem, ultrices eu volutpat ac, molestie sed metus. Nunc ex
+              nisl, bibendum tempor sollicitudin non, ultrices vitae lacus.
+              Quisque ac ex vitae ante congue ullamcorper sed in sem.
+              Suspendisse ac luctus risus, vel efficitur velit. Phasellus sapien
+              justo, venenatis sit amet erat a, commodo lobortis libero.
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere cubilia curae; Praesent eu urna tempus, tempor massa eu,
+              bibendum ex. Class aptent taciti sociosqu ad litora torquent per
+              conubia nostra, per inceptos himenaeos. Morbi facilisis ante enim,
+              in dignissim tortor molestie eget. Praesent eu risus turpis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="moving-text">
+    <div class="col-12">
+      <div class="inner">
+        <h2>The taste you'll remember</h2>
+        <h2>Experience of fine dining</h2>
+      </div>
+    </div>
+  </div>
+
+  <section class="homeMenu">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-lg-6 col-sm-6 col-12">
+          <div class="inner">
+            <MainTitle title="Check out our" subtitle="menus" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              commodo luctus metus, sed imperdiet leo vehicula ac. Phasellus
+              felis sem, ultrices eu volutpat ac, molestie sed metus. Nunc ex
+              nisl, bibendum tempor sollicitudin non, ultrices vitae lacus.
+              Quisque ac ex vitae ante congue ullamcorper sed in sem.
+              Suspendisse ac luctus risus
+            </p>
+
+            <p>
+              vel efficitur velit. Phasellus sapien justo, venenatis sit amet
+              erat a, commodo lobortis libero. Vestibulum ante ipsum primis in
+              faucibus orci luctus et ultrices posuere cubilia curae; Praesent
+              eu urna tempus, tempor massa eu, bibendum ex. Class aptent taciti
+              sociosqu ad litora torquent per conubia nostra, per inceptos
+              himenaeos. Morbi facilisis ante enim, in dignissim tortor molestie
+              eget. Praesent eu risus turpis.
+            </p>
+
+            <div class="btn-wrapper">
+              <a href="#" class="default mr-25">Lunch Menu</a>
+              <a href="#" class="default">Dinner Menu</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-6 col-12">
+          <div class="img">
+            <Image width="1000" height="1000" src={menuImg} alt="steak" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="homeOrder inner-padd pb-0">
+    <div class="bigger-container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <MainTitle title="" subtitle="Delicious food with meaning" />
+
+          <div class="img">
+            <Image src={orderImg} alt="order now" width="800" height="800" />
+
+            <div class="btn-wrapper mt-0">
+              <a href="#" class="floating default">Order Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .homeOrder .img {
+      margin-top: -60px;
+      position: relative;
+    }
+
+    .homeOrder {
+      background: #141414;
+    }
+
+    .floating {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      right: 18%;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      height: 120px;
+      width: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent-color);
+      border-color: var(--accent-color);
+    }
+
+    .homeOrder .main-title h2 {
+      font-size: 150px;
+    }
+    .homeBanner .img img {
+      width: 100%;
+      object-fit: cover;
+      height: 100vh;
+    }
+
+    .homeMenu .img img {
+      height: 800px;
+      object-fit: cover;
+    }
+
+    .homeMenu .inner {
+      padding-left: 80px;
+      max-width: 80%;
+    }
+
+    .moving-text {
+      background: #fff;
+    }
+
+    .moving-text h2 {
+      color: #f5f5f5;
+      font-family: "Bebas Neue", Sans-serif;
+      font-size: 200px;
+      text-transform: uppercase;
+      line-height: 0.8;
+      text-align: center;
+      margin: 0;
+    }
+
+    .homeBanner::before {
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.9) 50%,
+        transparent 60%
+      );
+      opacity: 0.75;
+    }
+
+    .homeBanner .text {
+      position: absolute;
+      left: 10%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .homeAbout {
+      background: #fff;
+      color: #000;
+    }
+  </style>
 </Layout>
-
-<style>
-  .homeBanner .img img {
-    width: 100%;
-    object-fit: cover;
-    height: 100vh;
-  }
-
-  .homeBanner::before {
-    background: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.9) 50%,
-      transparent 60%
-    );
-    opacity: 0.75;
-  }
-
-  .homeBanner .text {
-    position: absolute;
-    left: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-</style>
