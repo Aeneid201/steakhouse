@@ -1,0 +1,48 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import banner from "../assets/img/steak.jpg";
+import MainTitle from "../components/MainTitle.astro";
+---
+
+<Layout title="MTL SteakHouse">
+  <section class="homeBanner before">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 flush">
+          <div class="img">
+            <Image src={banner} alt="banner" width="1920" height="800" />
+          </div>
+
+          <div class="text">
+            <MainTitle title="Welcome to" subtitle="MTL Steakhouse" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .homeBanner .img img {
+    width: 100%;
+    object-fit: cover;
+    height: 100vh;
+  }
+
+  .homeBanner::before {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.9) 50%,
+      transparent 60%
+    );
+    opacity: 0.75;
+  }
+
+  .homeBanner .text {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+</style>

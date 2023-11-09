@@ -1,0 +1,19 @@
+{
+  "name": "restaurant",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@fontsource/bebas-neue": "^5.0.17",
+    "@fontsource/lato": "^5.0.17",
+    "@fontsource/nothing-you-could-do": "^5.0.17",
+    "astro": "^3.4.4",
+    "bootstrap": "^5.3.2"
+  }
+}

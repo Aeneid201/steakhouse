@@ -1,0 +1,28 @@
+---
+export interface Props {
+  title?: string;
+  subtitle?: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<div class="main-title">
+  <h3>{title}</h3>
+  <h2>{subtitle}</h2>
+</div>
+
+<style>
+  .main-title h3 {
+    font-family: var(--cursive);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1em;
+  }
+
+  .main-title h2 {
+    font-family: var(--title-font);
+    font-size: 130px;
+    line-height: 1;
+  }
+</style>
