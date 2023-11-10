@@ -9,7 +9,8 @@ import cateringImg from "../assets/img/cater.jpg";
 import cateringIcon from "../assets/img/catering.png";
 import MainTitle from "../components/MainTitle.astro";
 import swiper_1 from "../assets/img/menu.jpg";
-import "swiper/swiper-bundle.css";
+import Swiper from "swiper/bundle";
+import "swiper/css/bundle";
 ---
 
 <Layout
@@ -323,6 +324,7 @@ import "swiper/swiper-bundle.css";
 
 <script>
   const swiper = new Swiper(".swiper", {
+    loop: true,
     breakpoints: {
       576: {
         slidesPerView: 1,
@@ -336,6 +338,10 @@ import "swiper/swiper-bundle.css";
         slidesPerView: 3,
         spaceBetween: 20,
       },
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
   });
 </script>
