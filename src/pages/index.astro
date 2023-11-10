@@ -2,13 +2,20 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import banner from "../assets/img/steak.jpg";
-import aboutImg from "../assets/img/about.png";
+import aboutImg from "../assets/img/lobster.png";
 import menuImg from "../assets/img/menu.jpg";
 import orderImg from "../assets/img/order.png";
+import cateringImg from "../assets/img/cater.jpg";
+import cateringIcon from "../assets/img/catering.png";
 import MainTitle from "../components/MainTitle.astro";
+import swiper_1 from "../assets/img/menu.jpg";
+import "swiper/swiper-bundle.css";
 ---
 
-<Layout title="MTL SteakHouse">
+<Layout
+  title="MTL SteakHouse"
+  description="Our steakhouse offers a variety of dishes"
+>
   <section class="homeBanner before">
     <div class="container-fluid">
       <div class="row">
@@ -18,190 +25,317 @@ import MainTitle from "../components/MainTitle.astro";
           </div>
 
           <div class="text">
-            <MainTitle title="Welcome to" subtitle="MTL Steakhouse" />
+            <MainTitle title="Welcome to" subtitle="MTL <br> Steakhouse" />
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="homeAbout inner-padd">
-    <div class="bigger-container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 col-sm-6 col-12">
-          <div class="img">
-            <Image src={aboutImg} alt="about" width="600" height="600" />
-          </div>
-        </div>
-
-        <div class="col-lg-6 col-sm-6 col-12">
-          <div class="inner">
-            <MainTitle title="A little bit" subtitle="about us" />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              commodo luctus metus, sed imperdiet leo vehicula ac. Phasellus
-              felis sem, ultrices eu volutpat ac, molestie sed metus. Nunc ex
-              nisl, bibendum tempor sollicitudin non, ultrices vitae lacus.
-              Quisque ac ex vitae ante congue ullamcorper sed in sem.
-              Suspendisse ac luctus risus, vel efficitur velit. Phasellus sapien
-              justo, venenatis sit amet erat a, commodo lobortis libero.
-              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-              posuere cubilia curae; Praesent eu urna tempus, tempor massa eu,
-              bibendum ex. Class aptent taciti sociosqu ad litora torquent per
-              conubia nostra, per inceptos himenaeos. Morbi facilisis ante enim,
-              in dignissim tortor molestie eget. Praesent eu risus turpis.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="moving-text">
-    <div class="col-12">
-      <div class="inner">
-        <h2>The taste you'll remember</h2>
-        <h2>Experience of fine dining</h2>
-      </div>
-    </div>
+  <div class="hp-init-wrapper">
+    <canvas width="1600" height="800"></canvas>
   </div>
-
-  <section class="homeMenu">
-    <div class="container-fluid">
-      <div class="row align-items-center">
-        <div class="col-lg-6 col-sm-6 col-12">
-          <div class="inner">
-            <MainTitle title="Check out our" subtitle="menus" />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              commodo luctus metus, sed imperdiet leo vehicula ac. Phasellus
-              felis sem, ultrices eu volutpat ac, molestie sed metus. Nunc ex
-              nisl, bibendum tempor sollicitudin non, ultrices vitae lacus.
-              Quisque ac ex vitae ante congue ullamcorper sed in sem.
-              Suspendisse ac luctus risus
-            </p>
-
-            <p>
-              vel efficitur velit. Phasellus sapien justo, venenatis sit amet
-              erat a, commodo lobortis libero. Vestibulum ante ipsum primis in
-              faucibus orci luctus et ultrices posuere cubilia curae; Praesent
-              eu urna tempus, tempor massa eu, bibendum ex. Class aptent taciti
-              sociosqu ad litora torquent per conubia nostra, per inceptos
-              himenaeos. Morbi facilisis ante enim, in dignissim tortor molestie
-              eget. Praesent eu risus turpis.
-            </p>
-
-            <div class="btn-wrapper">
-              <a href="#" class="default mr-25">Lunch Menu</a>
-              <a href="#" class="default">Dinner Menu</a>
+  <div class="hp-content">
+    <section class="homeAbout inner-padd">
+      <div class="bigger-container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-sm-6 col-12">
+            <div class="img">
+              <Image src={aboutImg} alt="about" width="600" height="600" />
             </div>
           </div>
-        </div>
-        <div class="col-lg-6 col-sm-6 col-12">
-          <div class="img">
-            <Image width="1000" height="1000" src={menuImg} alt="steak" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="homeOrder inner-padd pb-0">
-    <div class="bigger-container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <MainTitle title="" subtitle="Delicious food with meaning" />
+          <div class="col-lg-6 col-sm-6 col-12">
+            <div class="inner">
+              <MainTitle title="A little bit" subtitle="about us" />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                commodo luctus metus, sed imperdiet leo vehicula ac. Phasellus
+                felis sem, ultrices eu volutpat ac, molestie sed metus. Nunc ex
+                nisl, bibendum tempor sollicitudin non, ultrices vitae lacus.
+                Quisque ac ex vitae ante congue ullamcorper sed in sem.
+                Suspendisse ac luctus risus, vel efficitur velit. Phasellus
+                sapien justo, venenatis sit amet erat a, commodo lobortis
+                libero. Vestibulum ante ipsum primis in faucibus orci luctus et
+                ultrices posuere cubilia curae; Praesent eu urna tempus, tempor
+                massa eu, bibendum ex. Class aptent taciti sociosqu ad litora
+                torquent per conubia nostra, per inceptos himenaeos. Morbi
+                facilisis ante enim, in dignissim tortor molestie eget. Praesent
+                eu risus turpis.
+              </p>
 
-          <div class="img">
-            <Image src={orderImg} alt="order now" width="800" height="800" />
-
-            <div class="btn-wrapper mt-0">
-              <a href="#" class="floating default">Order Now</a>
+              <div class="btn-wrapper">
+                <a href="#" class="default black">Learn more</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
+
+    <div class="moving-text">
+      <div class="col-12">
+        <div class="inner">
+          <h2>The taste you'll remember</h2>
+          <h2>Experience of fine dining</h2>
+        </div>
+      </div>
     </div>
-  </section>
 
-  <style>
-    .homeOrder .img {
-      margin-top: -60px;
-      position: relative;
-    }
+    <section class="homeMenu">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-sm-6 col-12">
+            <div class="inner">
+              <MainTitle title="Check out our" subtitle="menus" />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                commodo luctus metus, sed imperdiet leo vehicula ac. Phasellus
+                felis sem, ultrices eu volutpat ac, molestie sed metus. Nunc ex
+                nisl, bibendum tempor sollicitudin non, ultrices vitae lacus.
+                Quisque ac ex vitae ante congue ullamcorper sed in sem.
+                Suspendisse ac luctus risus
+              </p>
 
-    .homeOrder {
-      background: #141414;
-    }
+              <p>
+                vel efficitur velit. Phasellus sapien justo, venenatis sit amet
+                erat a, commodo lobortis libero. Vestibulum ante ipsum primis in
+                faucibus orci luctus et ultrices posuere cubilia curae; Praesent
+                eu urna tempus, tempor massa eu, bibendum ex. Class aptent
+                taciti sociosqu ad litora torquent per conubia nostra, per
+                inceptos himenaeos. Morbi facilisis ante enim, in dignissim
+                tortor molestie eget. Praesent eu risus turpis.
+              </p>
 
-    .floating {
-      position: absolute;
-      right: 0;
-      top: 50%;
-      right: 18%;
-      transform: translateY(-50%);
-      border-radius: 50%;
-      height: 120px;
-      width: 120px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--accent-color);
-      border-color: var(--accent-color);
-    }
+              <div class="btn-wrapper">
+                <a href="#" class="default mr-25">Lunch Menu</a>
+                <a href="#" class="default">Dinner Menu</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-6 col-12 flush">
+            <div class="img">
+              <Image width="1000" height="600" src={menuImg} alt="steak" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    .homeOrder .main-title h2 {
-      font-size: 150px;
-    }
-    .homeBanner .img img {
-      width: 100%;
-      object-fit: cover;
-      height: 100vh;
-    }
+    <section class="homeCater">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-sm-6 col-12 flush">
+            <div class="img">
+              <Image
+                width="1000"
+                height="1000"
+                src={cateringImg}
+                alt="catering"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-6 col-12">
+            <div class="inner">
+              <div class="icon">
+                <Image width="80" height="80" src={cateringIcon} alt="icon" />
+              </div>
+              <MainTitle title="We provide" subtitle="catering" />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                commodo luctus metus, sed imperdiet leo vehicula ac. Phasellus
+                felis sem, ultrices eu volutpat ac, molestie sed metus. Nunc ex
+                nisl, bibendum tempor sollicitudin non, ultrices vitae lacus.
+                Quisque ac ex vitae ante congue ullamcorper sed in sem.
+                Suspendisse ac luctus risus
+              </p>
 
-    .homeMenu .img img {
-      height: 800px;
-      object-fit: cover;
-    }
+              <div class="btn-wrapper">
+                <a href="#" class="default black-hover mr-25">Reserve now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    .homeMenu .inner {
-      padding-left: 80px;
-      max-width: 80%;
-    }
+    <section class="homeGallery inner-padd white-bg">
+      <div class="custom-container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <MainTitle title="Take a look at our" subtitle="gallery" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <Image
+                    width="800"
+                    height="800"
+                    alt="gallery-1"
+                    src={swiper_1}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    .moving-text {
-      background: #fff;
-    }
+    <section class="homeOrder inner-padd pb-0">
+      <div class="bigger-container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <MainTitle title="" subtitle="Delicious food <br> with meaning" />
 
-    .moving-text h2 {
-      color: #f5f5f5;
-      font-family: "Bebas Neue", Sans-serif;
-      font-size: 200px;
-      text-transform: uppercase;
-      line-height: 0.8;
-      text-align: center;
-      margin: 0;
-    }
+            <div class="img">
+              <Image src={orderImg} alt="order now" width="800" height="800" />
 
-    .homeBanner::before {
-      background: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.9) 50%,
-        transparent 60%
-      );
-      opacity: 0.75;
-    }
-
-    .homeBanner .text {
-      position: absolute;
-      left: 10%;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    .homeAbout {
-      background: #fff;
-      color: #000;
-    }
-  </style>
+              <div class="btn-wrapper mt-0">
+                <a href="#" class="floating default">Order Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </Layout>
+
+<style>
+  .homeCater {
+    background: var(--accent-color);
+  }
+  .homeCater .icon img {
+    filter: invert(1);
+    margin-bottom: 40px;
+  }
+  .homeCater .img img {
+    max-height: 800px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .homeOrder .img {
+    margin-top: -70px;
+    position: relative;
+  }
+
+  .homeOrder {
+    background: #141414;
+  }
+
+  .homeOrder .main-title h2 {
+    font-size: 150px;
+  }
+  .homeBanner .img img {
+    width: 100%;
+    object-fit: cover;
+    height: 100vh;
+  }
+
+  .homeBanner {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .homeMenu .img img {
+    height: 800px;
+    object-fit: cover;
+  }
+
+  .homeMenu .inner,
+  .homeCater .inner {
+    padding-left: 80px;
+    max-width: 80%;
+  }
+
+  .moving-text {
+    background: #fff;
+  }
+
+  .moving-text h2 {
+    color: #f5f5f5;
+    font-family: "Bebas Neue", Sans-serif;
+    font-size: 200px;
+    text-transform: uppercase;
+    line-height: 0.8;
+    text-align: center;
+    margin: 0;
+  }
+
+  .homeBanner::before {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.9) 50%,
+      transparent 60%
+    );
+    opacity: 0.75;
+  }
+
+  .homeBanner .text {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .homeAbout {
+    background: #fff;
+    color: #000;
+  }
+</style>
+
+<style is:inline>
+  .homeBanner .main-title h2 {
+    font-size: 200px !important;
+  }
+
+  .homeOrder .main-title h2 {
+    font-size: 150px !important;
+  }
+
+  .hp-content {
+    position: relative;
+    z-index: 5;
+    background: #0e0e0e;
+  }
+
+  .hp-init-wrapper canvas {
+    display: block;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .hp-init-wrapper {
+    position: relative;
+    z-index: 4;
+    pointer-events: none;
+  }
+</style>
+
+<script>
+  const swiper = new Swiper(".swiper", {
+    breakpoints: {
+      576: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      991: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+    },
+  });
+</script>

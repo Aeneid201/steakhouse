@@ -8,8 +8,8 @@ const { title, subtitle } = Astro.props;
 ---
 
 <div class="main-title">
-  <h3>{title}</h3>
-  <h2>{subtitle}</h2>
+  <h3 set:html={title} />
+  <h2 set:html={subtitle} />
 </div>
 
 <style>
