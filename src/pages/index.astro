@@ -8,9 +8,12 @@ import orderImg from "../assets/img/order.png";
 import cateringImg from "../assets/img/cater.jpg";
 import cateringIcon from "../assets/img/catering.png";
 import MainTitle from "../components/MainTitle.astro";
-import swiper_1 from "../assets/img/menu.jpg";
-import Swiper from "swiper/bundle";
-import "swiper/css/bundle";
+import swiper_1 from "../assets/img/swiper-1.jpg";
+import swiper_2 from "../assets/img/swiper-2.jpg";
+import swiper_3 from "../assets/img/swiper-3.jpg";
+import swiper_4 from "../assets/img/swiper-4.jpg";
+import swiper_5 from "../assets/img/swiper-5.jpg";
+import swiper_6 from "../assets/img/swiper-6.jpg";
 ---
 
 <Layout
@@ -169,18 +172,63 @@ import "swiper/css/bundle";
         </div>
         <div class="row">
           <div class="col-12">
-            <div class="swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <Image
-                    width="800"
-                    height="800"
-                    alt="gallery-1"
-                    src={swiper_1}
-                  />
-                </div>
-              </div>
-            </div>
+            <swiper-container
+              navigation="true"
+              slides-per-view="2.5"
+              space-between="30"
+              speed="500"
+              loop="true"
+              centered-slides="true"
+            >
+              <swiper-slide>
+                <Image
+                  width="1000"
+                  height="1000"
+                  src={swiper_1}
+                  alt="swiper-slide"
+                />
+              </swiper-slide>
+              <swiper-slide
+                ><Image
+                  width="1000"
+                  height="1000"
+                  src={swiper_2}
+                  alt="swiper-slide"
+                /></swiper-slide
+              >
+              <swiper-slide
+                ><Image
+                  width="1000"
+                  height="1000"
+                  src={swiper_3}
+                  alt="swiper-slide"
+                /></swiper-slide
+              >
+              <swiper-slide
+                ><Image
+                  width="1000"
+                  height="1000"
+                  src={swiper_4}
+                  alt="swiper-slide"
+                /></swiper-slide
+              >
+              <swiper-slide
+                ><Image
+                  width="1000"
+                  height="1000"
+                  src={swiper_5}
+                  alt="swiper-slide"
+                /></swiper-slide
+              >
+              <swiper-slide
+                ><Image
+                  width="1000"
+                  height="1000"
+                  src={swiper_6}
+                  alt="swiper-slide"
+                /></swiper-slide
+              >
+            </swiper-container>
           </div>
         </div>
       </div>
@@ -207,6 +255,11 @@ import "swiper/css/bundle";
 </Layout>
 
 <style>
+  .homeGallery swiper-slide img {
+    width: 100%;
+    height: 750px;
+    object-fit: cover;
+  }
   .homeCater {
     background: var(--accent-color);
   }
@@ -222,6 +275,22 @@ import "swiper/css/bundle";
   .homeOrder .img {
     margin-top: -70px;
     position: relative;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    background: var(--accent-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+  }
+
+  .swiper-button-next svg,
+  .swiper-button-prev svg {
+    color: #fff;
+    height: 20px;
   }
 
   .homeOrder {
@@ -323,25 +392,6 @@ import "swiper/css/bundle";
 </style>
 
 <script>
-  const swiper = new Swiper(".swiper", {
-    loop: true,
-    breakpoints: {
-      576: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      991: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+  import { register } from "swiper/element/bundle";
+  register();
 </script>
