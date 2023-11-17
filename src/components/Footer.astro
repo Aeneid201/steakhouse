@@ -4,7 +4,7 @@ import Social from "./Social.astro";
 
 <footer>
   <div class="bigger-container">
-    <div class="row">
+    <div class="row justify-content-between">
       <div class="col-lg-4 col-sm-6 col-12">
         <div class="inner">
           <p class="logo">MTLSTEAKHOUSE</p>
@@ -20,7 +20,7 @@ import Social from "./Social.astro";
         </div>
       </div>
 
-      <div class="col-lg-4 col-sm-6 col-12">
+      <div class="col-lg-3 col-sm-6 col-12">
         <div class="inner">
           <h3 class="title">Opening hours</h3>
           <p class="mb-0">Monday-Wednesday: 11am-9pm</p>
@@ -33,14 +33,14 @@ import Social from "./Social.astro";
         </div>
       </div>
 
-      <div class="col-lg-4 col-sm-6 col-12">
+      <div class="col-lg-3 col-sm-6 col-12">
         <div class="socials">
           <h3 class="title">Connect with us</h3>
-          <ul class="nolist">
-            <Social icon="fa fa-facebook" url="#" />
-            <Social icon="fa fa-instagram" url="#" />
-            <Social icon="fa fa-tiktok" url="#" />
-            <Social icon="fa fa-youtube" url="#" />
+          <ul class="nolist mt-3">
+            <Social icon="facebook" url="#" />
+            <Social icon="instagram" url="#" />
+            <Social icon="youtube" url="#" />
+            <Social icon="linkedin" url="#" />
           </ul>
         </div>
       </div>
@@ -60,6 +60,9 @@ import Social from "./Social.astro";
 </footer>
 
 <style>
+  footer hr {
+    margin: 50px 0 20px;
+  }
   footer {
     padding: 40px 0 20px;
     background: #0e0e0e;

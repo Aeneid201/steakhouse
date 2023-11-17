@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon";
 export interface Props {
   icon: string;
   url: string;
@@ -8,11 +9,16 @@ const { icon, url } = Astro.props;
 ---
 
 <li>
-  <a href={url}><i class={icon}></i></a>
+  <a href={url}><Icon pack="mdi" name={icon} /></a>
 </li>
 
 <style>
-  a i {
-    margin-right: 8px;
+  a svg {
+    margin-right: 20px;
+    width: 30px;
+  }
+
+  li {
+    display: inline-block;
   }
 </style>

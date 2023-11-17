@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import banner from "../assets/img/steak.jpg";
+import banner from "../assets/img/banner.jpg";
 import aboutImg from "../assets/img/lobster.png";
 import menuImg from "../assets/img/menu.jpg";
 import orderImg from "../assets/img/order.png";
@@ -45,12 +45,19 @@ import swiper_6 from "../assets/img/swiper-6.jpg";
         <div class="row align-items-center">
           <div class="col-lg-6 col-sm-6 col-12">
             <div class="img">
-              <Image src={aboutImg} alt="about" width="600" height="600" />
+              <Image
+                src={aboutImg}
+                alt="about"
+                width="600"
+                height="600"
+                data-aos-duration="1000"
+                data-aos="fade-down"
+              />
             </div>
           </div>
 
           <div class="col-lg-6 col-sm-6 col-12">
-            <div class="inner">
+            <div class="inner" data-aos-duration="1000" data-aos="fade-left">
               <MainTitle title="A little bit" subtitle="about us" />
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
@@ -80,8 +87,12 @@ import swiper_6 from "../assets/img/swiper-6.jpg";
     <div class="moving-text">
       <div class="col-12">
         <div class="inner">
-          <h2>The taste you'll remember</h2>
-          <h2>Experience of fine dining</h2>
+          <h2 data-aos-duration="1000" data-aos="fade-right">
+            The taste you'll remember
+          </h2>
+          <h2 data-aos-duration="1000" data-aos="fade-left">
+            Experience of fine dining
+          </h2>
         </div>
       </div>
     </div>
@@ -90,7 +101,7 @@ import swiper_6 from "../assets/img/swiper-6.jpg";
       <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-lg-6 col-sm-6 col-12">
-            <div class="inner">
+            <div class="inner" data-aos-duration="1000" data-aos="fade-right">
               <MainTitle title="Check out our" subtitle="menus" />
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
@@ -140,7 +151,7 @@ import swiper_6 from "../assets/img/swiper-6.jpg";
             </div>
           </div>
           <div class="col-lg-6 col-sm-6 col-12">
-            <div class="inner">
+            <div class="inner" data-aos-duration="1000" data-aos="fade-left">
               <div class="icon">
                 <Image width="80" height="80" src={cateringIcon} alt="icon" />
               </div>
@@ -166,7 +177,11 @@ import swiper_6 from "../assets/img/swiper-6.jpg";
     <section class="homeGallery inner-padd white-bg">
       <div class="custom-container">
         <div class="row">
-          <div class="col-12 text-center">
+          <div
+            class="col-12 text-center"
+            data-aos-duration="1000"
+            data-aos="fade-down"
+          >
             <MainTitle title="Take a look at our" subtitle="gallery" />
           </div>
         </div>
@@ -174,11 +189,10 @@ import swiper_6 from "../assets/img/swiper-6.jpg";
           <div class="col-12">
             <swiper-container
               navigation="true"
-              slides-per-view="2.5"
+              slides-per-view="3"
               space-between="30"
               speed="500"
               loop="true"
-              centered-slides="true"
             >
               <swiper-slide>
                 <Image
@@ -237,10 +251,14 @@ import swiper_6 from "../assets/img/swiper-6.jpg";
     <section class="homeOrder inner-padd pb-0">
       <div class="bigger-container">
         <div class="row">
-          <div class="col-12 text-center">
+          <div
+            class="col-12 text-center"
+            data-aos-duration="1000"
+            data-aos="fade-down"
+          >
             <MainTitle title="" subtitle="Delicious food <br> with meaning" />
 
-            <div class="img">
+            <div class="img" data-aos-duration="1000" data-aos="fade-up">
               <Image src={orderImg} alt="order now" width="800" height="800" />
 
               <div class="btn-wrapper mt-0">

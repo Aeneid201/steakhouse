@@ -40,16 +40,19 @@
               Menus
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">Lunch</a></li>
+              <li><a class="dropdown-item" href="#">Dinner</a></li>
+              <li><a class="dropdown-item" href="#">Group</a></li>
             </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link menu-button" href="#">Order Now</a>
+            <a class="nav-link" href="#">514-558-7884</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link menu-button" href="#">Order Online</a>
           </li>
         </ul>
       </div>
@@ -84,28 +87,30 @@
   header.scrolled {
     background: #0e0e0e;
   }
+
+  .navbar-nav .dropdown-menu {
+    border-radius: 0;
+    background: var(--accent-color);
+    color: #fff;
+    padding: 0;
+    border: none;
+  }
+
+  .navbar-nav .dropdown-menu a {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: var(--poppins);
+    transition: var(--trans);
+    padding: 12px 7px;
+    text-align: center;
+  }
+
+  .navbar-nav .dropdown-menu a:hover {
+    background: #000;
+  }
 </style>
 
 <script>
-  // the intersection observer API
-  // const header = document.querySelector("header");
-
-  // const stickyNav = function (entries) {
-  //   const [entry] = entries;
-
-  //   if (!entry.isIntersecting) {
-  //     header.classList.add("scrolled");
-  //   } else {
-  //     header.classList.remove("scrolled");
-  //   }
-  // };
-
-  // const observer = new IntersectionObserver(stickyNav, {
-  //   root: null,
-  //   threshold: 0,
-  // });
-  // observer.observe(header);
-
   let lastScrollTop;
   const navbar = document.querySelector("header");
 
