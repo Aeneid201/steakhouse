@@ -90,7 +90,7 @@
 
   .navbar-nav .dropdown-menu {
     border-radius: 0;
-    background: var(--accent-color);
+    background: transparent;
     color: #fff;
     padding: 0;
     border: none;
@@ -101,8 +101,14 @@
     text-transform: uppercase;
     font-family: var(--poppins);
     transition: var(--trans);
-    padding: 12px 7px;
+    padding: 7px;
+    font-size: 15px;
     text-align: center;
+    background: var(--accent-color);
+  }
+
+  .navbar-nav .dropdown-menu li {
+    margin-bottom: 5px;
   }
 
   .navbar-nav .dropdown-menu a:hover {

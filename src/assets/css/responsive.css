@@ -2,4 +2,8 @@
   header .navbar-nav .nav-link {
     padding: 10px 20px;
   }
+
+  header .navbar-brand {
+    padding: 10px 20px;
+  }
 }
